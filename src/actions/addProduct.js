@@ -1,15 +1,11 @@
 import { ADD_PRODUCT } from './types';
 
-export const addProduct = (productName, price, stock, image) => {
+export const addProduct = (name) => {
     return(dispatch) => {
 
         dispatch({
             type: ADD_PRODUCT,
-            productName: productName,
-            price: price,
-            stock: stock,
-            image: image
-
+            payload: name
         })
     }
 }

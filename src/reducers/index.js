@@ -3,7 +3,7 @@
 import { combineReducers } from 'redux';
 import cartReducer from './cartReducer';
 const initState = {
-	productName:"Ferrari",
+	name:"Ferrari",
 	tags:[]
 
 }

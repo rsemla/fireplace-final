@@ -1,11 +1,11 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {ADD_PRODUCT} from "../actions/types";
+import {useDispatch} from "react-redux";
+import {addProduct} from "../actions/addProduct";
 
-function Admin(addProduct) {
+function Admin() {
 
 	const [obj, setObj] = React.useState([{
-		productName: "",
+		name: "",
 		price: "",
 		stock: "",
 		image:""
@@ -20,13 +20,13 @@ function Admin(addProduct) {
 	const handleChange = (event) => {
 		const newInput = {
 			...obj,
-			[event.target.productName]: event.target.value
+			[event.target.name]: event.target.value
 		}
 		setObj(newInput);
 	}
 
 	const handleSubmit = (event) => {
-		if (!obj.productName || !obj.price || !obj.stock || !obj.image) {
+		if (!obj.name || !obj.price || !obj.stock || !obj.image) {
 			event.preventDefault();
 
 		} else {
@@ -38,7 +38,7 @@ function Admin(addProduct) {
 		<div>
 			<h1>Administration Page. Need to add a car?</h1>
 
-			<input type="text" placeholder={"Car Name..."} onChange={handleChange("productName")}/>
+			<input type="text" placeholder={"Car Name..."} onChange={handleChange("name")}/>
 			<input type="text" placeholder={"Price..."} onChange={handleChange("price")}/>
 			<input type="text" placeholder={"In Stock..."} onChange={handleChange("stock")}/>
 			<input type="text" placeholder={"Image..."} onChange={handleChange("image")}/>
