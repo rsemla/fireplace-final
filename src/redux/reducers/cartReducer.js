@@ -102,28 +102,29 @@ export default (state = initialState, action) => {
 				}
 			}
 			}
-
+break
 		case GET_NUMBERS_CART:
 			return {
 				...state
 			}
 		case INCREASE_QUANTITY:
 			productSelected = { ...state.cartProducts[action.payload]}
-			if(productSelected.stock >0){
-			productSelected.quantity += 1;
-			productSelected.stock -= 1;
+			if(productSelected.stock >0) {
+				productSelected.quantity += 1;
+				productSelected.stock -= 1;
 
-			return {
-				...state,
-				cartNumbers: state.cartNumbers + 1,
-				stockNumbers: productSelected.stock,
-				cartTotalCost: state.cartTotalCost + state.cartProducts[action.payload].price,
-				cartProducts: {
-					...state.cartProducts,
-					[action.payload]: productSelected
+				return {
+					...state,
+					cartNumbers: state.cartNumbers + 1,
+					stockNumbers: productSelected.stock,
+					cartTotalCost: state.cartTotalCost + state.cartProducts[action.payload].price,
+					cartProducts: {
+						...state.cartProducts,
+						[action.payload]: productSelected
+					}
 				}
 			}
-			}
+			break
 		case DECREASE_QUANTITY:
 			productSelected = { ...state.cartProducts[action.payload]}
 			let newCartCost = 0;
