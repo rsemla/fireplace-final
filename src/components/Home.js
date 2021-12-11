@@ -1,11 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { addCart } from "../actions/addAction";
 import { getNumbers } from '../actions/getAction';
-import {useSelector, useDispatch} from "react-redux";
-import{ADD_PRODUCT} from "../actions/types";
 import { productQuantity, removeFromCart } from "../actions/productQuantity";
-import Cart from "./Cart";
 import car1 from '../images/image1.jpg'
 import car2 from '../images/image2.jpg'
 import car3 from '../images/image3.jpg'
@@ -15,7 +12,6 @@ import car6 from '../images/image6.jpg'
 import car7 from '../images/image7.jpg'
 import car8 from '../images/image8.jpg'
 import car9 from '../images/image9.jpg'
-import cartReducer from "../redux/reducers/cartReducer";
 
 const imageStyle = {
 	width: '300px',
