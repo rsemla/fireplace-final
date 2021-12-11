@@ -1,48 +1,27 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
-import {addProduct} from "../actions/addProduct";
+
 
 function Admin() {
 
-	const [obj, setObj] = React.useState([{
-		name: "",
-		price: "",
-		stock: "",
-		image:""
-	}])
-
-	const dispatch = useDispatch();
-
-	const addCar = () => {
-		dispatch(addProduct(obj))
-	}
-
-	const handleChange = (event) => {
-		const newInput = {
-			...obj,
-			[event.target.name]: event.target.value
-		}
-		setObj(newInput);
-	}
-
-	const handleSubmit = (event) => {
-		if (!obj.name || !obj.price || !obj.stock || !obj.image) {
-			event.preventDefault();
-
-		} else {
-			addCar()
-		}
-	}
-
 	return (
 		<div>
-			<h1>Administration Page. Need to add a car?</h1>
+			<h1>Administration Page.</h1>
 
-			<input type="text" placeholder={"Car Name..."} onChange={handleChange("name")}/>
-			<input type="text" placeholder={"Price..."} onChange={handleChange("price")}/>
-			<input type="text" placeholder={"In Stock..."} onChange={handleChange("stock")}/>
-			<input type="text" placeholder={"Image..."} onChange={handleChange("image")}/>
-			<button onClick={handleSubmit}>Submit</button>
+			<h2>Need to add a car?</h2>
+
+			<input type="text" placeholder={"Car Name..."} />
+			<input type="text" placeholder={"Price..."} />
+			<input type="text" placeholder={"In Stock..."} />
+			<input type="text" placeholder={"Image..."} />
+			<button>Submit</button>
+
+
+			<h5>I tried and tried to get the Admin page to work to allow the user
+			to add a car, but I was getting an error for the map function,
+			which I emailed you about without a response. I literally rebuilt the
+			whole program after I got the map function to work and after adding everything else back
+			it still had the same error. I researched online but could not find anything I spent far
+			too much time on this.</h5>
 		</div>
 	)
 }

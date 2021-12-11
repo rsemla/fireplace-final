@@ -1,4 +1,4 @@
-import { ADD_PRODUCT_CART, GET_NUMBERS_CART, INCREASE_QUANTITY, DECREASE_QUANTITY, REMOVE_FROM_CART, ADD_PRODUCT } from '../actions/types';
+import { ADD_PRODUCT_CART, GET_NUMBERS_CART, INCREASE_QUANTITY, DECREASE_QUANTITY, REMOVE_FROM_CART} from '../../actions/types';
 
 const initialState = {
 	cartNumbers: 0,
@@ -167,8 +167,11 @@ export default (state = initialState, action) => {
 			}
 		default:
 			return state;
+
 	}
+
 }
+
 
 
 

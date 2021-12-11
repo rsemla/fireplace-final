@@ -1,11 +1,8 @@
-import { ADD_PRODUCT } from './types';
 
-export const addProduct = (name) => {
-    return(dispatch) => {
 
-        dispatch({
-            type: ADD_PRODUCT,
-            payload: name
-        })
+export const add_car=(car)=>{
+    return {
+        type:"ADD_CAR",
+        car:car
     }
 }
