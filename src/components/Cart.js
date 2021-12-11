@@ -1,5 +1,3 @@
-
-
 import React, {Fragment} from 'react'
 import { connect } from 'react-redux';
 import { productQuantity, removeFromCart } from "../actions/productQuantity";

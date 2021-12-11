@@ -19,7 +19,7 @@ const imageStyle = {
 }
 
 
-const Home = (props, product, cartProducts) => {
+const Home = (props) => {
 	return (
 
 		<div className="container">
