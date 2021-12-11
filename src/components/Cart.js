@@ -48,7 +48,7 @@ function Cart({cartProps, productQuantity, removeFromCart}){
 
 		return(
 			<Fragment key={idx}>
-				<div className="product"><img src={productImages(product)} />
+				<div className="product"><img src={productImages(product)} alt={productImages(product)} />
 					<span className="sm-hide">{product.name}</span>
 				</div>
 				<div className="price sm-hide">${product.price}</div>
